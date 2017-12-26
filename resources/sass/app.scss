@@ -1,0 +1,38 @@
+@import "bootstrap";
+
+.page-header {
+    @extend .py-4;
+}
+
+.component {
+    .title {
+        @extend .py-lg-4;
+        @extend .d-lg-flex;
+        justify-content: center;
+        align-items: center;
+
+        h3 {
+            @extend .mr-auto;
+            @extend .d-lg-flex;
+            @extend .mb-0;
+            flex-direction: column;
+        }
+
+        .actions {
+            @extend .d-lg-flex;
+            flex-direction: column;
+
+            .form-check {
+                @extend .mb-0;
+
+                .form-check-label {
+                    @extend .mr-3;
+
+                    &:last-child {
+                        @extend .mr-0;
+                    }
+                }
+            }
+        }
+    }
+}

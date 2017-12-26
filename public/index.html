@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Huel Calculator</title>
+
+        <link rel="stylesheet" href="/css/app.css">
+    </head>
+    <body>
+        <div id="app">
+            <div class="container">
+
+                <div class="page-header">
+                    <h1>Huel Calculator</h1>
+                    <p class="lead">Calculate your BMR and amount of Huel per serving to reach your target weight...</p>
+                </div>
+
+                <div class="alert alert-warning">
+                    <h3>Warning</h3>
+                    You use this tool at your own risk - I am not a dietitian and it's been built using formulas from the internet.
+                </div>
+
+
+                <bmr-calculator></bmr-calculator>
+                <daily-calorie-needs :bmr="bmr"></daily-calorie-needs>
+                <deficit :mode="mode" :daily-requirement="dailyRequirement"></deficit>
+                <huel-calculator :daily-requirement="caloriesWithDeficit"></huel-calculator>
+            </div>
+        </div>
+
+        <script src="/js/app.js"></script>
+    </body>
+</html>
